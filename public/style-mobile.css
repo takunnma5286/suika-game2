@@ -1,0 +1,857 @@
+html {
+    -ms-touch-action: none;
+}
+
+body,
+canvas,
+div {
+    display: block;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Remove spin of input type number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+
+
+#adsResultfooter {
+    width:100vw !important;
+    height: auto !important;
+    position: absolute;
+    bottom:0 !important;
+}
+#adsResultfooter div  {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResultfooter div div {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResultfooter a {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResultfooter div img{
+    width:100vw !important;
+    height: auto !important;
+}
+
+#adsResult {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResult div  {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResult div div {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResult a {
+    width:100vw !important;
+    height: auto !important;
+}
+#adsResult div img{
+    width:100vw !important;
+    height: auto !important;
+}
+
+.thisScore {
+    font-size: 15vw;
+    text-align: center;
+    color: #FFF;
+    display: block;
+    width: 100%;
+    letter-spacing: 4px;position: relative;
+    top: -15px;
+}
+
+#GameEndScoreScreen {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+}
+#GameEndScoreScreen h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    margin-top: 5vw;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-bottom: 5px solid #FFF;
+    color:#FFF;
+    font-size: 6vw;
+}
+#GameEndScoreScreen h1{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    margin-top: 10vw;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color:#fff;
+    font-size: 9vw;
+}
+
+#scoreScreen {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    background-color: #B65901;
+}
+#scoreScreen h2{
+    width: calc(100% - 20px);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: 3px solid #ffc571;
+    border-bottom: 4px solid #815a2b;
+    background-color: #ff8800;
+    color:#FFF;
+    font-size: 5vw;
+    text-shadow:
+    1px 1px #815a2b,
+    -1px 1px #815a2b,
+    1px -1px #815a2b,
+    -1px -1px #815a2b,
+    1px 1px 0px #815a2b;
+}
+
+#scoreCloseButton {
+    margin-top:20px;
+    background-color: cornflowerblue;
+}
+#GameMyScoreResult {
+    font-weight: 600;
+}
+#GameWeekScoreResult {
+    font-weight: 600;
+}
+.list-ranking-item-small {
+    margin: 0 auto;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 8vw;
+    list-style: none;
+    font-size: 5vw;
+    background-color: bisque;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    padding: 0px ;
+    line-height: 7vw;
+    padding-right:8px !important;
+    display: block;
+    text-align: right;
+
+}
+
+
+.list-ranking-item {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: relative;
+    height: 10vw;
+    margin-left: 35px;
+    margin-right: 35px;
+    list-style: none;
+    font-size: 7vw;
+    width: 100vw;
+    background-color: bisque;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    padding: 0px !important;
+    line-height: 9vw;
+    border: 1px solid #B65901;
+}
+
+.rank_icon {
+    width: 7vw;
+    height: 7vw;
+    background-color: #aaa;
+    border-radius: 50%;
+    color: #FFF;
+    display: block;
+    /* text-align: center; */
+    line-height: 6.5vw;
+    position: absolute;
+    left: -6vw;
+    /* padding-left: 4px; */
+    letter-spacing: 0px;
+    font-size: 4vw;
+    z-index: 999;
+    position: absolute;
+}
+.rank_icon-small {
+    width: 8vw;
+    height: 8vw;
+    background-color: #aaa;
+    border-radius: 50%;
+    color: #FFF;
+    display: block;
+    /* text-align: center; */
+    line-height: 6.7vw;
+    position: absolute;
+    left: -3vw;
+    top: -1vw;
+    /* padding-left: 4px; */
+    letter-spacing: 0px;
+    font-size: 4vw;
+    font-weight: bold;
+    background: none;
+    z-index: 999;
+    position: absolute;
+    text-shadow:
+    1px 1px orange,
+    -1px 1px orange,
+    1px -1px orange,
+    -1px -1px orange,
+    1px 1px 5px orange;
+    text-align: center;
+}
+
+.list-ranking-item img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -0px;
+}
+.list-ranking-item-small img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -0px;
+}
+
+#GameEndScoreScreen {
+    padding-top: 15vw;
+}
+
+.rank_icon.rank_1 {
+    font-weight: bold;
+    background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+}
+.rank_icon.rank_2 {
+    font-weight: bold;
+    background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+.rank_icon.rank_3 {
+    font-weight: bold;
+    background: linear-gradient(45deg, #815a2b 0%, #815a2b 45%, #815a2b 70%, #815a2b 85%, #815a2b 90% 100%);
+}
+
+
+
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    cursor: default;
+    color: #888;
+    background-color: #333;
+    text-align: center;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* fix bug: https://github.com/cocos-creator/2d-tasks/issues/791 */
+    /* overflow cannot be applied in Cocos2dGameContainer, 
+  otherwise child elements will be hidden when Cocos2dGameContainer rotated 90 deg */
+    overflow: hidden;
+}
+
+#Cocos2dGameContainer {
+    position: absolute;
+    margin: 0;
+    left: 0px;
+    top: 0px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+canvas {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+a:link,
+a:visited {
+    color: #666;
+}
+
+a:active,
+a:hover {
+    color: #666;
+}
+
+p.header {
+    font-size: small;
+}
+
+p.footer {
+    font-size: x-small;
+}
+
+#splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff url(./singleColor.png) no-repeat center;
+    background-size: 100%;
+}
+
+.progress-bar {
+    background-color: #1a1a1a;
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    height: 15px;
+    padding: 5px;
+    width: 50%;
+    /*margin: 0 -175px;         */
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    transition: width .4s ease-in-out;
+    background-color: #34c2e3;
+}
+
+.stripes span {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    animation: animate-stripes 1s linear infinite;
+}
+
+.tinder--card {
+    z-index: 999 !important;
+}
+
+.nav-tabs {
+    border-bottom: 0px solid #dee2e6 !important;
+    background-color: #FFF;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #FFF !important;
+    font-size: 15px;
+    text-shadow: 1px 1px #815a2b, -1px 1px #815a2b, 1px -1px #815a2b, -1px -1px #815a2b, 1px 1px 0px #815a2b;
+    background-color: rgb(255, 194, 0) !important;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-bottom: 0px solid #dee2e6 !important;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    border-bottom: 0px solid #dee2e6 !important;
+    color: rgb(83, 83, 83);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+@keyframes animate-stripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 60px 0;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    /* 横幅が320px以下の場合に適用するスタイル */
+    .list-ranking-item-small {
+        display: none;
+    }
+
+    #scoreScreen h2 {
+        padding: 6px;
+        margin-top:10px;
+        font-size: 4vw;
+    }
+
+    .nav-tabs {
+        border-bottom: 0px solid #dee2e6 !important;
+        background-color: #FFF;
+    }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #FFF !important;
+        font-size: 4vw !important;
+        text-shadow: 1px 1px #815a2b, -1px 1px #815a2b, 1px -1px #815a2b, -1px -1px #815a2b, 1px 1px 0px #815a2b;
+        background-color: rgb(255, 194, 0) !important;
+        border-color: #dee2e6 #dee2e6 #fff;
+        border-bottom: 0px solid #dee2e6 !important;
+        font-weight: bold;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 18px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+        border-bottom: 0px solid #dee2e6 !important;
+        color: rgb(83, 83, 83);
+        border-top-right-radius: 15px;
+        font-size: 3.5vw !important;
+        border-top-left-radius: 15px;
+    }
+.list-ranking-item {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: relative;
+    height: 10vw;
+    margin-left: 35px;
+    margin-right: 35px;
+    list-style: none;
+    font-size: 6vw;
+    width: 100vw;
+    background-color: bisque;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    padding: 0px !important;
+    line-height: 9vw;
+    border: 1px solid #B65901;
+}
+
+.rank_icon {
+    width: 7vw;
+    height: 7vw;
+    background-color: #aaa;
+    border-radius: 50%;
+    color: #FFF;
+    display: block;
+    /* text-align: center; */
+    line-height: 6.5vw;
+    position: absolute;
+    left: -5vw;
+    /* padding-left: 4px; */
+    letter-spacing: 0px;
+    font-size: 4vw;
+    z-index: 999;
+    position: absolute;
+}
+.rank_icon-small {
+    width: 8vw;
+    height: 8vw;
+    background-color: #aaa;
+    border-radius: 50%;
+    color: #FFF;
+    display: block;
+    /* text-align: center; */
+    line-height: 6.7vw;
+    position: absolute;
+    left: -3vw;
+    top: -1vw;
+    /* padding-left: 4px; */
+    letter-spacing: 0px;
+    font-size: 4vw;
+    font-weight: bold;
+    background: none;
+    z-index: 999;
+    position: absolute;
+    text-shadow:
+    1px 1px orange,
+    -1px 1px orange,
+    1px -1px orange,
+    -1px -1px orange,
+    1px 1px 5px orange;
+    text-align: center;
+}
+
+.list-ranking-item img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -0px;
+}
+.list-ranking-item-small img {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -0px;
+}
+
+#GameEndScoreScreen {
+    padding-top: 15vw;
+}
+ }
+
+@media (min-width: 375px) {
+    /* 横幅が800px以上の場合に適用するスタイル */
+    
+ }
+
+
+@media screen and (min-width:430px){
+    #canvasDiv, #Cocos2dGameContainer, canvas, .game-area {
+        width: 430px !important;
+        min-width: 430px !important;
+        max-width: 430px !important;
+        height: 754px !important;
+        min-height: 754px !important;
+        max-height: 754px !important;
+        margin:0 auto;
+    }
+    #scoreScreen {
+        width: 300px;
+        margin:0 auto;
+        position: relative;
+        background: none;
+        margin-top: 30px;
+    }
+    #GameEndScoreScreen h1 {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 900;
+        margin-top: 10%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: #fff;
+        font-size: 34px;
+    }
+    #GameEndScoreScreen h2 {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 600;
+        margin-top: 5%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+        border-bottom: 5px solid #FFF;
+        color: #FFF;
+        font-size: 28px;
+    }
+    
+    .thisScore {
+        font-size: 40px;
+        text-align: center;
+        color: #FFF;
+        display: block;
+        width: 100%;
+        letter-spacing: 4px;
+        position: relative;
+        top: 0px;
+    }
+    #scoreScreen h2 {
+        width: calc(100% - 20px);
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 600;
+        margin-top: 20px;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 15px;
+        border: 3px solid #ffc571;
+        border-bottom: 4px solid #815a2b;
+        background-color: #ff8800;
+        color: #FFF;
+        font-size: 15px;
+        text-shadow: 1px 1px #815a2b, -1px 1px #815a2b, 1px -1px #815a2b, -1px -1px #815a2b, 1px 1px 0px #815a2b;
+    }
+
+    .list-ranking-item {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        position: relative;
+        height: 35px;
+        margin-left: 35px;
+        margin-right: 35px;
+        list-style: none;
+        font-size: 15px;
+        width: 100%;
+        background-color: bisque;
+        border-radius: 20px;
+        letter-spacing: 3px;
+        padding: 0px !important;
+        line-height: 2em;
+        border: 1px solid #B65901;
+    }
+
+    .rank_icon {
+        width: 35px;
+        height: 35px;
+        background-color: #aaa;
+        border-radius: 50%;
+        color: #FFF;
+        display: block;
+        line-height: 2em;
+        position: absolute;
+        left: -40px;
+        letter-spacing: 0px;
+        font-size: 15px;
+        z-index: 999;
+        position: absolute;
+    }
+    .list-ranking-item-small {
+
+        flex: auto !important;
+        width: 100% !important;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        position: relative;
+        height: 35px;
+        margin-left: 35px;
+        margin-right: 35px;
+        list-style: none;
+        font-size: 15px;
+        width: 100%;
+        background-color: bisque;
+        border-radius: 20px;
+        letter-spacing: 3px;
+        padding: 0px !important;
+        line-height: 2em;
+        border: 1px solid #B65901;
+        text-align: center;
+    }
+    .rank_icon-small {
+        width: 35px;
+        height: 35px;
+        background-color: #aaa;
+        border-radius: 50%;
+        color: #FFF;
+        display: block;
+        /* text-align: center; */
+        line-height: 2em;
+        position: absolute;
+        left: -41px;
+        top: 0;
+        padding-left: 0;
+        letter-spacing: 0px;
+        font-size: 15px;
+        font-weight: bold;
+        background: none;
+        z-index: 999;
+        position: absolute;
+        text-shadow: 1px 1px orange, -1px 1px orange, 1px -1px orange, -1px -1px orange, 1px 1px 5px orange;
+        text-align: center;
+    }
+    .list-ranking-item-small img {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 0px;
+    }
+    #scoreCloseButton {
+        height: 60px !important;
+        width: 60px !important;
+        margin-top: 0;
+        position: absolute;
+        z-index: 999;
+        bottom: -35px !important;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border: 3px solid #FFF;
+        background-color: rgb(4, 106, 222);
+    }
+    body {
+        background-color: #FFD59D !important;
+        position: absolute;
+        /* overflow: visible; */
+        /* top:50px !important; */
+    }
+    .game-area {
+        position: absolute;
+        /* top: 50px !important; */
+        left:0;
+        right: 0;
+        margin: 0 auto;
+    }
+    main {
+        background-color: #29A5BB;
+        width: calc(440px + 360px + 360px) !important;
+        position: absolute;
+        height: 100%;
+        top:754px;
+        left: -360px !important;
+        right: 0 !important;
+        margin:0 auto !important;
+        z-index:999;
+        border-radius: 50px;
+    }
+    main .pc-info-area {
+        padding-top: 140px;
+    }
+    header {
+        background-color: #ff8800;
+        position: fixed;
+        min-height:50px;
+        width:100%;
+        top:0px;
+        left:0;
+        z-index:999;
+    }
+    header img {
+        width:40px;
+        height:40px;
+        text-align: left;
+    }
+    .side {
+        position: relative;
+        top:0px;
+    }
+    .side-left {
+        width: 360px;
+        height: 100vh;
+        background-color: #FFD59D;
+        position: absolute;
+        left: 430px;
+        top:0;
+    }
+
+    .side-right {
+        width: 360px;
+        height: 100vh;
+        background-color: #FFD59D;
+        position: absolute;
+        left: -360px;
+        top:0;
+    }
+    .side-right h1, .side-left h1 {
+    
+        font-family: 'Noto Sans JP', sans-serif;
+        color:#423E6B;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+    .side-right h2, .side-left h2 {
+        width: calc(100% - 20px);
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 600;
+        margin-top: 20px;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 15px;
+        border: 3px solid #ffc571;
+        border-bottom: 4px solid #815a2b;
+        background-color: #ff8800;
+        color: #FFF;
+        font-size: 15px;
+        text-shadow: 1px 1px #815a2b, -1px 1px #815a2b, 1px -1px #815a2b, -1px -1px #815a2b, 1px 1px 0px #815a2b;
+    }
+    .rule_seicho {
+    }
+    .rule_seicho img {
+        width:250px;
+        height: auto;
+    }
+
+    .side-right p, .side-left p {
+
+        font-family: 'Noto Sans JP', sans-serif;
+        color:#423E6B;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 15px;
+        line-height: 1.8em;
+        background-color: #fff5d1;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding:10px;
+        border-radius: 25px;border: 3px solid #ffc571;
+    }
+
+    .header-img {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .chara {
+        padding-left: 0rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .chara li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        font-family: 'Noto Sans JP', sans-serif;
+        color:#423E6B;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 15px;
+        line-height: 1.8em;
+        background-color: #fff5d1;
+        border-radius: 35px;border: 3px solid #ffc571;
+
+    }
+    .chara li img {
+        width:40px;
+        height:40px;
+        margin-right:10px;
+    }
+
+
+    #adsResultfooter {
+        width:100% !important;
+        height: auto !important;
+        position: absolute;
+        bottom: -84px !important;
+        z-index: 999 !important;
+    }
+    #adsResultfooter div  {
+        width:100% !important;
+        height: auto !important;
+    }
+    #adsResultfooter div div {
+        width:100% !important;
+        height: auto !important;
+    }
+    #adsResultfooter a {
+        width:100% !important;
+        height: auto !important;
+    }
+    #adsResultfooter div img {
+        width:100% !important;
+        height: auto !important;
+    }
+}
